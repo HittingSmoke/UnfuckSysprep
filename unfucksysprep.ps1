@@ -1,17 +1,12 @@
 <#
-Purpose:       Script to remove many of the pre-loaded 3rd-party Metro "modern app" bloatware. Called by Tron in Stage 2: De-bloat
+Purpose:       Script to remove Windows Store apps which block sysprep
                Add any AppX uninstall commands to this list to target them for removal
 Requirements:  1. Administrator access
                2. Windows 7 and up
-Author:        vocatus on reddit.com/r/TronScript ( vocatus.gate at gmail ) // PGP key: 0x07d1490f82a211a2
-Version:       1.1.4 + Add *A278AB0D.MarchofEmpires*, *KeeperSecurityInc.Keeper*, *ThumbmunkeysLtd.PhototasticCollage*. Thanks to /u/Phaellow
-               1.1.3 + Add Playtika.CaesarsSlotsFreeCasino and some others
-               1.1.2 + Add *king.com.CandyCrushSodaSaga*. Thanks to /u/Phaellow
-               1.1.1 + Add flaregamesGmbH.RoyalRevolt2. Thanks to /u/Phaellow
-               1.1.0 * Update script to use cleaner removal function. Thanks to /u/madbomb122
-               1.0.2 + Add 6Wunderkinder.Wunderlist, 2FE3CB00.PicsArt-PhotoStudio, Microsoft.NetworkSpeedTest, thanks to github:Bromeego
-               1.0.1 + Add 46928bounde.EclipseManager, D5EA27B7.Duolingo-LearnLanguagesforFree, thanks to /u/phobos258
-               1.0.0 + Add script version and date variables to support automatic updates at Tron runtime
+Originally written by vocatus for reddit.com/r/TronScript.
+Original version: https://github.com/bmrf/tron/blob/master/resources/stage_2_de-bloat/metro/metro_Microsoft_modern_apps_to_target_by_name.ps1
+
+
 #>
 $ErrorActionPreference = "SilentlyContinue"
 
@@ -68,6 +63,7 @@ Remove-App "*BD9B8345.MusicbySony*"
 Remove-App "*BD9B8345.Socialife*"
 Remove-App "*BD9B8345.VAIOCare*"
 Remove-App "*BD9B8345.VAIOMessageCenter*"
+Remove-App "*BingNews*"
 Remove-App "*ChaChaSearch.ChaChaPushNotification*"
 Remove-App "*ClearChannelRadioDigital.iHeartRadio*"
 Remove-App "*CrackleInc.Crackle*"
@@ -115,6 +111,7 @@ Remove-App "*king.com.BubbleWitch3Saga*"
 Remove-App "*MAGIX.MusicMakerJam*"
 Remove-App "*McAfee*"
 Remove-App "*McAfeeInc.05.McAfeeSecurityAdvisorforASUS*"
+Remove-App "*Minecraft*"
 Remove-App "*MobileFileExplorer*"
 Remove-App "*MusicMakerJam*"
 Remove-App "*NAMCOBANDAIGamesInc.PAC-MANChampionshipEditionDXfo*"
