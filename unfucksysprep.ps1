@@ -14,8 +14,8 @@ $ErrorActionPreference = "SilentlyContinue"
 ########
 # PREP #
 ########
-$METRO_3RD_PARTY_MODERN_APPS_TO_TARGET_BY_NAME_SCRIPT_VERSION = "1.1.4"
-$METRO_3RD_PARTY_MODERN_APPS_TO_TARGET_BY_NAME_SCRIPT_DATE = "2017-07-04"
+#$METRO_3RD_PARTY_MODERN_APPS_TO_TARGET_BY_NAME_SCRIPT_VERSION = "1.1.4"
+#$METRO_3RD_PARTY_MODERN_APPS_TO_TARGET_BY_NAME_SCRIPT_DATE = "2017-07-04"
 
 # Build the removal function
 Function Remove-App([String]$AppName){
@@ -28,7 +28,59 @@ Function Remove-App([String]$AppName){
 ###########
 # EXECUTE #
 ###########
-# Active identifiers
+#Microsoft App Identifiers
+Remove-App "*Microsoft.MinecraftUWP*"
+Remove-App "*Microsoft.NetworkSpeedTest*"
+Remove-App "*Microsoft.WindowsReadingList*"
+Remove-App "Microsoft.3DBuilder"                       # '3DBuilder' app
+Remove-App "Microsoft.Advertising.Xaml"
+Remove-App "Microsoft.BingFinance"                     # 'Money' app - Financial news
+Remove-App "Microsoft.BingFoodAndDrink"                # 'Food and Drink' app
+Remove-App "Microsoft.BingHealthAndFitness"            # 'Health and Fitness' app
+Remove-App "Microsoft.BingNews"                        # 'Generic news' app
+Remove-App "Microsoft.BingSports"                      # 'Sports' app - Sports news
+Remove-App "Microsoft.BingTranslator"                  # 'Translator' app - Bing Translate
+Remove-App "Microsoft.BingTravel"                      # 'Travel' app
+Remove-App "Microsoft.CommsPhone"                      # 'Phone' app
+Remove-App "Microsoft.ConnectivityStore"
+Remove-App "Microsoft.FreshPaint"                      # 'Canvas' app
+Remove-App "Microsoft.Getstarted"                      # 'Get Started' link
+Remove-App "Microsoft.Messaging"                       # 'Messaging' app
+Remove-App "Microsoft.MicrosoftJackpot"                # 'Jackpot' app
+Remove-App "Microsoft.MicrosoftJigsaw"                 # 'Jigsaw' app
+Remove-App "Microsoft.MicrosoftOfficeHub"
+Remove-App "Microsoft.MicrosoftPowerBIForWindows"      # 'Power BI' app - Business analytics
+Remove-App "Microsoft.MicrosoftSudoku"
+Remove-App "Microsoft.MovieMoments"                    # imported from stage_2_de-bloat.bat
+Remove-App "Microsoft.Office.OneNote"                  # 'Onenote' app
+Remove-App "Microsoft.Office.Sway"                     # 'Sway' app
+Remove-App "Microsoft.OneConnect"                      # 'OneConnect' app
+Remove-App "Microsoft.People"                          # 'People' app
+Remove-App "Microsoft.SkypeApp"                        # 'Get Skype' link
+Remove-App "Microsoft.SkypeWiFi"
+Remove-App "Microsoft.Studios.Wordament"               # imported from stage_2_de-bloat.bat
+Remove-App "Microsoft.WindowsFeedbackHub"              # Feedback app
+Remove-App "Microsoft.Zune*"                           # 'Zune' collection of apps
+
+# Inactive Microsoft
+#Remove-App "*Microsoft.XboxApp*"
+#Remove-App "Microsoft.Appconnector"                   # Not sure about this one
+#Remove-App "Microsoft.BingWeather"                    # 'Weather' app
+#Remove-App "Microsoft.BioEnrollment"                  # not sure about this one
+#Remove-App "Microsoft.Microsoft3DViewer"              # 3D model viewer
+#Remove-App "Microsoft.MicrosoftSolitaireCollection"   # Solitaire collection
+#Remove-App "Microsoft.MicrosoftStickyNotes"           # Pulled from active list due to user requests
+#Remove-App "Microsoft.Windows.Photos"                 # Photos app
+#Remove-App "Microsoft.WindowsAlarms"                  # 'Alarms and Clock' app
+#Remove-App "Microsoft.WindowsCalculator"              # Calculator app
+#Remove-App "Microsoft.WindowsCamera"                  # Camera app
+#Remove-App "Microsoft.WindowsMaps"                    # Maps app
+#Remove-App "Microsoft.WindowsSoundRecorder"           # Sound Recorder app
+#Remove-App "Microsoft.WindowsStore"                   # Windows Store
+#Remove-App "Microsoft.windowscommunicationsapps"      # 'Calendar and Mail' app
+#Remove-App "Microsoft.MSPaint"                        # MS Paint (Paint 3D)
+
+# Third Party App Identifiers
 Remove-App "*06DAC6F6.StumbleUpon*"
 Remove-App "*134D4F5B.Box*"
 Remove-App "*1430GreenfieldTechnologie.PuzzleTouch*"
@@ -63,7 +115,6 @@ Remove-App "*BD9B8345.MusicbySony*"
 Remove-App "*BD9B8345.Socialife*"
 Remove-App "*BD9B8345.VAIOCare*"
 Remove-App "*BD9B8345.VAIOMessageCenter*"
-Remove-App "*BingNews*"
 Remove-App "*ChaChaSearch.ChaChaPushNotification*"
 Remove-App "*ClearChannelRadioDigital.iHeartRadio*"
 Remove-App "*CrackleInc.Crackle*"
@@ -111,7 +162,6 @@ Remove-App "*king.com.BubbleWitch3Saga*"
 Remove-App "*MAGIX.MusicMakerJam*"
 Remove-App "*McAfee*"
 Remove-App "*McAfeeInc.05.McAfeeSecurityAdvisorforASUS*"
-Remove-App "*Minecraft*"
 Remove-App "*MobileFileExplorer*"
 Remove-App "*MusicMakerJam*"
 Remove-App "*NAMCOBANDAIGamesInc.PAC-MANChampionshipEditionDXfo*"
@@ -145,6 +195,6 @@ Remove-App "*sMedioforHP.sMedio360*"
 Remove-App "*sMedioforToshiba.TOSHIBAMediaPlayerbysMedioTrueLin*"
 Remove-App "*toolbar*"
 Remove-App "*zuukaInc.iStoryTimeLibrary*"
+Remove-App "*Netflix*"
 
-# Inactive identifers
-#Remove-App "*Netflix*"
+
